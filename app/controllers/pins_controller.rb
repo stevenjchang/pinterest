@@ -9,7 +9,12 @@ class PinsController < ApplicationController
 
   def create
     @pin = Pin.new(pin_params)
-  end
+    
+    if @pin.save
+      redirect_to @pin, notice: "saved successfully"
+    else
+      render 'new'
+   end
 
   def pin_params
     params.require(:pin).permit(:title, :description)
