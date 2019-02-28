@@ -7,7 +7,6 @@
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
   = csp_meta_tag
-
 %body
   %nav.navbar.navbar-default
     .container
@@ -23,7 +22,7 @@
           %li= link_to 'New Pin', new_pin_path
           %li= link_to 'Sign In', new_user_registration_path 
           %li= link_to 'Sign Out', new_user_session_path
-
+  .container
     - flash.each do |key, value|
       = content_tag :div, value, class: 'alert alert-info'
     
