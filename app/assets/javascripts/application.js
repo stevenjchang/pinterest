@@ -12,6 +12,6 @@
 //
 //= require rails-ujs
 //= require bootstrap-sprockets
-//= require masonry/masonry
+//= require masonry/jquery.masonry
 //= require activestorage
 //= require_tree .
